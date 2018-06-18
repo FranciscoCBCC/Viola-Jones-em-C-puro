@@ -41,9 +41,9 @@ int main(){
 	for(int y = 0; y < imagemBitmap.INFOHEADER.biHeight; y++){
     	for(int x = 0; x < imagemBitmap.INFOHEADER.biWidth; x++){
 			char buffer;
-			buffer = ((imagemBitmap.IMAGEDATA[y * imagemBitmap.INFOHEADER.biWidth + x].r)+ //Vermelho
-					 (imagemBitmap.IMAGEDATA[y * imagemBitmap.INFOHEADER.biWidth + x].g)+ //Verde
-					 (imagemBitmap.IMAGEDATA[y * imagemBitmap.INFOHEADER.biWidth + x].b))/3; //Azul
+			buffer = (0.21*(imagemBitmap.IMAGEDATA[y * imagemBitmap.INFOHEADER.biWidth + x].r)+ //Vermelho
+					 0.72*(imagemBitmap.IMAGEDATA[y * imagemBitmap.INFOHEADER.biWidth + x].g)+ //Verde
+					 0.07*(imagemBitmap.IMAGEDATA[y * imagemBitmap.INFOHEADER.biWidth + x].b)); //Azul
 			imagemBitmap.IMAGEDATA[y * imagemBitmap.INFOHEADER.biWidth + x].r = buffer;
 			imagemBitmap.IMAGEDATA[y * imagemBitmap.INFOHEADER.biWidth + x].g = buffer;
 			imagemBitmap.IMAGEDATA[y * imagemBitmap.INFOHEADER.biWidth + x].b = buffer;
